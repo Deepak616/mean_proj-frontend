@@ -1,5 +1,10 @@
 export class AuthController {
-    constructor(){
+    constructor($auth){
         'ngInject';
+        this.$auth=$auth;
+    }
+    
+    register(){
+        this.$auth.signup({"email":"deepak"});
     }
 }

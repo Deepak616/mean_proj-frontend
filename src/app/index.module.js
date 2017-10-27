@@ -31,7 +31,8 @@ import {
     compareToDirective
 } from './directives/compareTo.directive';
 
-angular.module('frontEnd', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr'])
+angular.module('frontEnd', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr','satellizer'])
+    .constant('API_URL','http://localhost:5000')
     .constant('malarkey', malarkey)
     .constant('moment', moment)
     .config(config)
