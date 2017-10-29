@@ -5,6 +5,10 @@ export class AuthController {
     }
     
     register(){
-        this.$auth.signup(this.user);
+        var vm =this;
+        vm.$auth.signup(this.user).then(function(res){
+            console.log(res.data.token);
+            vm.$auth.setToken(res.data.token);
+        })
     }
 }
