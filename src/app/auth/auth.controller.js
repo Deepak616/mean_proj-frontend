@@ -12,7 +12,7 @@ export class AuthController {
         })
     }
     
-    login(){
+    loginFn(){
         var vm=this;
         vm.$auth.login(vm.login).then(function(res){
             vm.$auth.setToken(res.data.token);
