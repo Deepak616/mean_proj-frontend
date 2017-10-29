@@ -16,6 +16,9 @@ import {
     AuthController
 } from './auth/auth.controller';
 import {
+    NavbarController
+} from './components/navbar/navbar.controller';
+import {
     GithubContributorService
 } from '../app/components/githubContributor/githubContributor.service';
 import {
@@ -31,8 +34,8 @@ import {
     compareToDirective
 } from './directives/compareTo.directive';
 
-angular.module('frontEnd', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr','satellizer'])
-    .constant('API_URL','http://localhost:5000')
+angular.module('frontEnd', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'satellizer'])
+    .constant('API_URL', 'http://localhost:5000')
     .constant('malarkey', malarkey)
     .constant('moment', moment)
     .config(config)
@@ -42,6 +45,7 @@ angular.module('frontEnd', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
     .service('webDevTec', WebDevTecService)
     .controller('MainController', MainController)
     .controller('AuthController', AuthController)
+    .controller('NavbarController', NavbarController)
     .directive('acmeNavbar', NavbarDirective)
     .directive('acmeMalarkey', MalarkeyDirective)
     .directive('compareTo', compareToDirective)
