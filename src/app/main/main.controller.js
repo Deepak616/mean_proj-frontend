@@ -7,12 +7,12 @@ export class MainController {
   }
     getMessages(){
         var vm=this
-        this.$http.get('http://localhost:5000/api/getMessage').then(function(res){
+        this.$http.get('http://meanstack-env.pgtmywsvpp.ap-south-1.elasticbeanstalk.com:5000/api/getMessage').then(function(res){
             vm.messages=res.data;
         })
     }
     postMessage(){
-       this.$http.post('http://localhost:5000/api/postMessage',{msg:this.text});
+       this.$http.post('http://meanstack-env.pgtmywsvpp.ap-south-1.elasticbeanstalk.com:5000/api/postMessage',{msg:this.text});
     }
 
  
